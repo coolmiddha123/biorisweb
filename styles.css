@@ -9,6 +9,6 @@ a{
     background: wheat;
 }
 .logo{
-    height: 3vw;
-    width:5vw;
+    height: 3vw !important;
+    width:5vw !important;
 }

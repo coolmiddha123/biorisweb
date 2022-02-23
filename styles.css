@@ -12,3 +12,8 @@ a{
     height: 3vw;
     width:5vw;
 }
+
+#header{
+    border-bottom: 5px solid #0098da;
+    height:100%
+}

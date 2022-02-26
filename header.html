@@ -1,47 +1,75 @@
 <body>
-    <div id="header" class="headerBg h-screen">
-        <div class="container  mx-auto">
-            <nav class="container  mx-auto flex items-center justify-between flex-wrap p-6 w-full z-10 top-0">
-                <div class="flex items-center flex-shrink-0 text-white mr-6">
-                    <a class="text-white no-underline hover:text-white hover:no-underline" href="#">
-                        <img class="logo h-40 rounded w-full object-cover object-center" src="logo.png" alt="content">
-                    </a>
+    <nav class="bg-white shadow-lg">
+        <div id="header">
+            <div class="container  mx-auto">
+
+                <div class="grid grid-cols-2">
+                    <div>
+                        <!-- Website Logo -->
+                        <a href="#" class="flex items-center py-4 px-2">
+                            <img src="logo.png" alt="Logo" class="h-8 w-8 mr-2">
+                            <span class="font-semibold text-gray-500 text-lg px-7"><i>Boris Pharmaceuticals</i></span>
+                        </a>
+                    </div>
+                    <!-- Primary Navbar items -->
+                    <div class="hidden md:flex justify-end">
+                        <div class="grid grid-cols-4 ">
+                            <a href="/index.html" class="index py-4 px-2 text-gray-500 font-semibold"
+                                onclick="highlightSelection(this)">Home</a>
+                            <a href="/about.html"
+                                class="about py-4 px-2 text-gray-500 font-semibold  transition duration-300"
+                                onclick="highlightSelection(this)">About
+                                Us</a>
+                            <a href="/ourproducts.html"
+                                class="ourproducts py-4 px-2 text-gray-500 font-semibold  transition duration-300"
+                                onclick="highlightSelection(this)">Our
+                                Products</a>
+                            <a href="/contactus.html"
+                                class="contactus py-4 px-2 text-gray-500 font-semibold  transition duration-300"
+                                onclick="highlightSelection(this)">Contact
+                                Us</a>
+                        </div>
+                    </div>
+                    <!-- Mobile menu button -->
+                    <div class="md:hidden grid justify-items-end pr-2">
+                        <button class="outline-none mobile-menu-button">
+                            <svg onclick="showMenu()" class=" w-6 h-6 text-gray-500 hover:text-green-500 "
+                                x-show="!showMenu" fill="none" stroke-linecap="round" stroke-linejoin="round"
+                                stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
+                                <path d="M4 6h16M4 12h16M4 18h16"></path>
+                            </svg>
+                        </button>
+                    </div>
                 </div>
 
-                <div class="block lg:hidden">
-                    <button id="nav-toggle"
-                        class="flex items-center px-3 py-2 border rounded text-gray-500 border-gray-600 hover:text-white hover:border-white"
-                        onclick="hideButton()">
-                        <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                            <title>Menu</title>
-                            <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
-                        </svg>
-                    </button>
-                </div>
 
-                <div class="flex-grow lg:flex lg:items-center lg:w-auto hidden lg:block pt-6 lg:pt-0 " id="nav-content">
-                    <ul class="list-reset lg:flex justify-end flex-1 items-center">
-                        <li class="mr-3">
-                            <a class="inline-block py-2 px-4 text-gray-600 no-underline" href="/index.html">Home</a>
-                        </li>
-                        <li class="mr-3">
-                            <a class="inline-block text-gray-600 no-underline hover:text-gray-200 hover:text-underline py-2 px-4"
-                                href="/about.html">About Us</a>
-                        </li>
-                        <li class="mr-3">
-                            <a class="inline-block text-gray-600 no-underline hover:text-gray-200 hover:text-underline py-2 px-4"
-                                href="/ourproducts.html">Our Products</a>
-                        </li>
-                        <li class="mr-3">
-                            <a class="inline-block text-gray-600 no-underline hover:text-gray-200 hover:text-underline py-2 px-4"
-                                href="/contactus.html">Contact Us</a>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
+
+            </div>
         </div>
-    </div>
+        <!-- mobile menu -->
+        <!--class="active"-->
+        <div class="hidden mobile-menu">
 
+
+            <ul class="active">
+                <li><a href="/index.html"
+                        class="index block text-sm px-2 py-4 hover:bg-green-500 font-semibold">Home</a>
+                </li>
+                <li><a href="/about.html"
+                        class="about block text-sm px-2 py-4 hover:bg-green-500 transition duration-300">About
+                        Us</a></li>
+                <li><a href="/ourproducts.html"
+                        class="ourproducts block text-sm px-2 py-4 hover:bg-green-500 transition duration-300">Our
+                        Products</a></li>
+                <li><a href="/contactus.html"
+                        class="contactus block text-sm px-2 py-4 hover:bg-green-500 transition duration-300">Contact
+                        Us</a></li>
+            </ul>
+        </div>
+
+    </nav>
+    </div>
+    </div>
 
 
 </body>

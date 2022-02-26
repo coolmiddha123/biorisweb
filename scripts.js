@@ -41,7 +41,7 @@ function highlightSelection() {
     let path = document.location.pathname;
     console.log(path);
     let elements = [];
-    if (path.includes('index.html')) {
+    if (path.includes('index.html') || path === '/') {
         elements = document.querySelectorAll(".index")
     } else if (path.includes('about.html')) {
         elements = document.querySelectorAll(".about");

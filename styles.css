@@ -6,7 +6,7 @@ a{
     cursor: pointer;
 }
 .footerBg{
-    background: wheat;
+    background: #48bb78;
 }
 .logo{
     height: 3vw;
@@ -15,6 +15,14 @@ a{
 
 #header{
     border-bottom: 5px solid #48bb78; /*#0098da*/
+    height:auto;
+    position:fixed;
+    top:0;
+    background-color: white;
+    width:100vw;
+    z-index: 999;
+}
+.mobileHead{
     height:auto;
     position:fixed;
     top:0;

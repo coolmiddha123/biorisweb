@@ -32,6 +32,16 @@ function includeHTML() {
 function hideButton() {
     document.getElementById("nav-content").classList.toggle("hidden");
 }
+function showProducts() {
+    document.getElementById("products").classList.toggle("hidden");
+    if(![...document.getElementById("products").classList].includes("hidden")){
+        console.log(document.getElementById("products").classList);
+        document.getElementById("prodBtn").innerText = "Click to Hide Details of Products";
+    }
+    else{
+        document.getElementById("prodBtn").innerText = "Click to Get Complete Details of Products";
+    }
+}
 
 function showMenu() {
     document.querySelector(".mobile-menu").classList.toggle("hidden");
@@ -47,6 +57,8 @@ function highlightSelection() {
         elements = document.querySelectorAll(".about");
     } else if (path.includes('ourproducts.html')) {
         elements = document.querySelectorAll(".ourproducts");
+    }else if (path.includes('franchise.html')) {
+        elements = document.querySelectorAll(".franchise");
     } else {
         elements = document.querySelectorAll(".contactus");
     }
